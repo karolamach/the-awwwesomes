@@ -1,0 +1,334 @@
+@-webkit-keyframes GradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes GradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes GradientBackground { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* ============================
+GLOBAL – fonts, links, images
+=============================== */
+
+p,
+form label,
+form input {
+	font-family: "Roboto";
+	font-size: 12px;
+	color: #4f2480;
+	letter-spacing: 1px;
+	line-height: 16px;
+}
+
+h1, 
+h2,
+nav,
+a.btn, 
+span,
+button {
+	font-family: "Montserrat";
+	text-transform: lowercase;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 116px;
+	display: inline-block;
+}
+
+h2 {
+	font-size: 27px;
+	letter-spacing: 3px;
+	color: #4f2480;
+	margin-bottom: 30px;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: #4f2480;
+}
+
+img {
+	width: 100%;
+	transition: ease-in-out, .5s;
+}
+img:hover {
+	filter: brightness(110%);
+}
+
+.row {
+	padding-top: 70px;
+}
+.row img {
+	margin-top: 20px;
+}
+.row p {
+	margin-bottom: 40px;
+}
+
+
+/* ======================================
+HEADER - navigation, jumbotron, svg waves
+========================================= */
+
+nav {
+	width: 100%;
+	padding: 20px 0;
+}
+nav ul {
+	display: block;
+	text-align: center;	
+}
+nav ul li {
+	display: inline-block;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #4f2480;	
+
+}
+nav ul li a {	
+	float: left;
+	transition: .3s;
+}
+nav ul li a:hover {	
+	color: white;
+}
+
+#jumbotron {
+	height: 445px;
+	position: relative;
+	background: linear-gradient(bottom left, #f86881, #9326f1);
+	background: -webkit-linear-gradient(bottom left, #f86881, #9326f1);
+	background: -moz-linear-gradient(bottom left, #f86881, #9326f1);
+	background: -o-linear-gradient(bottom left, #f86881, #9326f1);
+	background-size: 100%;
+}
+#mainName{
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	text-align: center;
+	top: 33%;
+	color: white;
+}
+#mainName p {
+	font-size: 21px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	text-transform: lowercase;
+	margin-top: 10px;
+	color: white;
+}
+
+#wave-top-smaller {
+	position: absolute;
+	right: 55px;
+	bottom: 40px;
+	width: 350px;
+}
+#wave-top-bigger {
+	position: absolute;
+	right: 0;
+	bottom: -35px;
+	width: 550px;
+}
+
+/* ===================================================
+MAIN - sections: projects, experience, company culture
+====================================================== */
+
+
+a.btn {
+	box-sizing: border-box;
+	padding: 10px 20px;
+	border: solid 2px #e479d7;
+	font-size: 15px;
+	color: #4f2480;
+	transition: all 0.2s linear 0s;
+	position: relative;
+}
+a.btn::before {
+	content: "\f178";
+    font-family: FontAwesome;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #4f2480;
+    transform: scale(0,1);
+    transition: all 0.2s linear 0s;
+}
+a.btn:hover {
+    color: transparent;
+}   
+a.btn:hover::before {
+      transform: scale(1,1);
+      text-indent: 0;
+}
+
+span.big-number {
+	font-size: 247px;
+	z-index: -1;
+	top: 0;
+	line-height: 190px;
+}
+#projects span.big-number {
+	color: #e479d7;
+}
+#experience span.big-number {
+	color: #fd7e97;
+}
+#company-culture span.big-number {
+	color: #e61fb6;
+}	
+
+
+/* ============================================
+MAIN - section "ideas" with parallax background
+=============================================== */
+
+#ideas {
+	margin-top: 70px;
+	background-image: url("/img/fullbg.jpg");
+	background-position: center top;
+	height: 350px;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+
+#ideas h2 {
+	font-size: 73px;
+	color: white;
+	padding-top: 138.5px;
+}
+
+#wave-bottom {
+	width: 50%;
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+}
+
+
+/* ===================
+FOOTER - contact form
+====================== */
+
+footer {
+	background: linear-gradient(bottom left, #f86881, #9326f1);
+	background: -webkit-linear-gradient(bottom left, #f86881, #9326f1);
+	background: -moz-linear-gradient(bottom left, #f86881, #9326f1);
+	background: -o-linear-gradient(bottom left, #f86881, #9326f1);
+	background-size: 100%;
+	padding-bottom: 70px;
+	margin-top: 70px;
+}
+footer h2 {
+	font-size: 63px;
+}
+
+form label {
+	display: block;
+}
+form label:last-of-type {
+	margin-bottom: 10px;
+}
+form input,
+form textarea {
+	background: transparent;
+	width: 90%;
+	margin-bottom: 20px;
+	padding: 10px;
+	color: #4f2480;
+}
+form input {
+	border: none;
+	border-bottom: 2px solid #4f2480;
+}
+form textarea {
+	border: 2px solid #4f2480;
+}
+form input:focus,
+form input:active,
+form textarea:focus,
+form textarea:active {
+	outline: none;
+	border-color: #fff;
+}
+form button {
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 2px;
+	padding: 10px 40px;
+	cursor: pointer;
+	transition: ease-in-out .3s;
+}
+form button:hover,
+form button:focus {
+	-webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transform-origin: left top;
+}
+
+/* =====
+MOBILE
+=======*/
+
+@media (max-width: 769px) {
+	#mainName,
+	#wave-top-smaller,
+	#wave-top-bigger,
+	#projects img,
+	#experience img,
+	#ideas {
+		display: none;
+	}
+	#jumbotron {
+		height: 300px;
+		background-size: 200%;
+		-webkit-animation: GradientBackground 7s ease infinite;
+		-moz-animation: GradientBackground 7s ease infinite;
+		animation: GradientBackground 7s ease infinite;
+	}
+	nav ul li {
+		padding: 20px;
+	}
+	.btn {
+		float: right;
+	}
+	main img {
+		padding-top: 50px;
+	}
+	form input,
+	form textarea {
+		width: 100%;
+		font-size: 16px;
+	}
+	footer {
+		padding: 70px 20px;
+	}
+}
+
+
